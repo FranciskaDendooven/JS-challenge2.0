@@ -26,7 +26,8 @@ const drinkCollection = [
 {
     name: "Earl Grey tea",
     Type: "hot drink",
-    price: "€2"
+    price: "€2",
+    color: "YellowGreen"
 },
 {
     name: "Herbal tea",
