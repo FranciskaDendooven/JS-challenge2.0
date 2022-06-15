@@ -49,4 +49,13 @@ const drinkCollection = [
 },
 ];
 
-export{drinkCollection};
+const hotDrinkInstructions = [
+        `<ul>
+        <li>Put the kettle on</li>
+        <li>Get a teaspoon of tea in your cup</li>
+        <li>Pour the water and wait for a couple of minutes</li>
+        <li>Enjoy the perfect tea!</li>
+        </ul>`
+];
+
+export{drinkCollection, hotDrinkInstructions};
