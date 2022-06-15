@@ -7,16 +7,10 @@ drinkCollection.forEach((drink) => {
     button.style.backgroundColor = drink.color;
     document.body.append(button);
 
-console.log("horse");
-
-    let cocktail = drink.cocktail;
-
     button.addEventListener("click", () => {
-        if (drink === cocktail) {
+        if (drink.Type === "cocktail") {
             console.log("cocktail");
-    
-            
-        }
+        } else {console.log("not a cocktail");}
     });
 
 });
