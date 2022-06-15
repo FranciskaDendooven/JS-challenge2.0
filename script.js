@@ -21,7 +21,12 @@ drinkCollection.forEach((drink) => {
         if(drink.Type === "hot drink") {
             button.innerHTML = hotDrinkInstructions;
         }
-        
+
+        fetch ("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink.name)
+        .then((response) => response.json())
+        .then((data) => {
+        console.log(data.drinks);})
+        .catch(error => console.warn(error));
     });
 
 });
