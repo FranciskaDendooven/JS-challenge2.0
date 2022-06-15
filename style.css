@@ -1,1 +1,6 @@
-/*# sourceMappingURL=style.css.map */
+img {
+  display: flex;
+  margin-left: 5rem;
+  width: 25%;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */

@@ -4,6 +4,7 @@ drinkCollection.forEach((drink) => {
     console.log(drink);
     const button = document.createElement("button");
     const div = document.createElement("div");
+    const img = document.createElement("img");
     button.innerHTML = drink.name;
     button.style.backgroundColor = drink.color;
     document.body.append(button);
@@ -25,7 +26,11 @@ drinkCollection.forEach((drink) => {
         fetch ("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink.name)
         .then((response) => response.json())
         .then((data) => {
-        console.log(data.drinks);})
+        console.log(data.drinks[0]);
+        div.innerText = data.drinks[0].strInstructions;
+        div.prepend(img);
+        img.src = data.drinks[0].strDrinkThumb;
+        })
         .catch(error => console.warn(error));
     });
 
